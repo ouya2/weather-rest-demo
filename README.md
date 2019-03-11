@@ -22,10 +22,6 @@ This application is packaged as a war which has Tomcat 8 embedded. You run it us
 * The threshold validation only for Melbourne - 7839805, Darwin - 2073124, Hobart - 2163355, Perth - 2063523
 * Other cities still show top 5 launch windows as long as id is valid.
 
-### To view Swagger 2 API docs
-
-Run the server and browse to http://localhost:8080/swagger-ui.html 
-
 ## Technology Summary
 * Springboot
 * Java 8
