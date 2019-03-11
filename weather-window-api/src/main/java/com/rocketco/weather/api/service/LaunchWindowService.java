@@ -46,11 +46,11 @@ public class LaunchWindowService {
     if (CollectionUtils.isNotEmpty(weatherEntries)) {
       LaunchWindowThreshold threshold = CITY_LAUNCH_WINDOW_THRESHOLD.get(id);
       launchWindowList = weatherEntries.stream()
-                    .filter(weatherEntry -> isNotExceeded(threshold, weatherEntry))
-                    .map(weatherEntry -> createLaunchWindow(weatherEntry, response.getCity()))
-                    .sorted(Comparator.comparing(LaunchWindow::getScore).reversed())
-                    .limit(LAUNCH_WINDOW_SIZE)
-                    .collect(Collectors.toList());
+                        .filter(weatherEntry -> isNotExceeded(threshold, weatherEntry))
+                        .map(weatherEntry -> createLaunchWindow(weatherEntry, response.getCity()))
+                        .sorted(Comparator.comparing(LaunchWindow::getScore).reversed())
+                        .limit(LAUNCH_WINDOW_SIZE)
+                        .collect(Collectors.toList());
     }
     return launchWindowList;
   }

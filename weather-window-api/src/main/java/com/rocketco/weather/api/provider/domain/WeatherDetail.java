@@ -20,6 +20,15 @@ public class WeatherDetail implements Serializable {
   private Double groundLevelPressure;
   private Integer humidity;
 
+  public WeatherDetail(){
+  }
+
+  public WeatherDetail(Double temperature, Double minimumTemperature, Double maximumTemperature) {
+    this.temperature = temperature;
+    this.minimumTemperature = minimumTemperature;
+    this.maximumTemperature = maximumTemperature;
+  }
+
   public Double getTemperature() {
     return temperature;
   }

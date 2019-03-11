@@ -3,6 +3,7 @@ package com.rocketco.weather.api.rest;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Before;
@@ -30,10 +31,9 @@ public class LaunchWindowEndpointTest extends EndpointTest {
     mockMvc.perform(get("/launch-window/city/{id}", cityId))
         .andDo(print())
         .andExpect(status().isOk())
-        .andExpect(content().contentType(JSON_MEDIA_TYPE));
-//        .andExpect(jsonPath("$.id").value(customerId))
-//        .andExpect(jsonPath("$.firstName").value(testCustomer.getFirstName()))
-//        .andExpect(jsonPath("$.lastName").value(testCustomer.getLastName()));
+        .andExpect(content().contentType(JSON_MEDIA_TYPE))
+        .andExpect(jsonPath("$.launchWindows[0].location").value("Melbourne - AU"))
+        .andExpect(jsonPath("$.launchWindows[0].datetime").value("2019-03-11 06:00:00"))
+        .andExpect(jsonPath("$.launchWindows[0].score").value(10));
   }
-
 }

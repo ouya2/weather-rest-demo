@@ -8,6 +8,13 @@ public class Cloudiness implements Serializable {
   @JsonProperty("all")
   private Integer cloudinessValue;
 
+  public Cloudiness(){
+  }
+
+  public Cloudiness(Integer cloudinessValue) {
+    this.cloudinessValue = cloudinessValue;
+  }
+
   public Integer getCloudinessValue() {
     return cloudinessValue;
   }

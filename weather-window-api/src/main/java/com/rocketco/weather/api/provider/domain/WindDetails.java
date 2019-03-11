@@ -9,6 +9,14 @@ public class WindDetails implements Serializable {
   @JsonProperty("deg")
   private Double direction;
 
+  public WindDetails(){
+  }
+
+  public WindDetails(double speed, double direction) {
+    this.speed = speed;
+    this.direction = direction;
+  }
+
   public Double getSpeed() {
     return speed;
   }

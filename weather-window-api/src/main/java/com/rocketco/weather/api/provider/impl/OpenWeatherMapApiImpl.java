@@ -4,6 +4,7 @@ import com.rocketco.weather.api.configuration.properties.OpenWeatherMapPropertie
 import com.rocketco.weather.api.provider.OpenWeatherMapApi;
 import com.rocketco.weather.api.provider.domain.WeatherEntryResponse;
 import java.net.URI;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;

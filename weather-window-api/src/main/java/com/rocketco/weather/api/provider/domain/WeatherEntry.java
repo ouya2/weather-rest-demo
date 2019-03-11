@@ -15,6 +15,7 @@ public class WeatherEntry implements Serializable {
   @JsonProperty("clouds")
   private Cloudiness cloudiness;
 
+  @JsonProperty("wind")
   private WindDetails windDetails;
 
   @JsonProperty("dt_txt")
