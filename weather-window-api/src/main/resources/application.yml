@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+management:
+  port: 8081
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false
+
+info:
+  build:
+    artifact: ${project.artifactId}
+    name: ${project.name}
+    description: ${project.description}
+    version: ${project.version}
+
+rest-template-config:
+  connectionTimeout: 2000
+  readTimeout: 2000
+
+open-weather-api:
+  api-key: af9241212d74eedf16d1af8b47df4ff0
+  url: http://api.openweathermap.org/data/2.5/forecast?id={cityId}&APPID={apiKey}&units={units}
+  units: metric
