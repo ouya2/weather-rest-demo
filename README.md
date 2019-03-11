@@ -27,3 +27,12 @@ This application is packaged as a war which has Tomcat 8 embedded. You run it us
 Run the server and browse to http://localhost:8080/swagger-ui.html 
 
 ## Technology Summary
+* Springboot
+* Java 8
+* Google Guava
+* Apache Commons
+
+## Possible Improvement
+* Logging
+* Security
+* Resilient pattern for external API call.
